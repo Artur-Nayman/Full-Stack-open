@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Statistic from './assets/Statistic'
+import Button from './assets/Button'
 
 function App() {
   const [good, setGood] = useState(0)
@@ -14,15 +15,9 @@ function App() {
     <>
       <h1>Give Feedback</h1>
       <div className="card">
-        <button onClick={() => setGood((good) => good + 1)}>
-          Good
-        </button>
-        <button onClick={() => setMid((mid) => mid + 1)}>
-          Mid
-        </button>
-        <button onClick={() => setBad((bad) => bad + 1)}>
-          Bad
-        </button>
+        <Button text="Good" handleClick={() => setGood(good + 1)}/>
+        <Button text="Mid" handleClick={() => setMid(mid + 1)}/>
+        <Button text="Bad" handleClick={() => setBad(bad + 1)}/>
         <p>
           Statistic
         </p>
@@ -36,7 +31,7 @@ function App() {
       <p className="read-the-docs">
         Bad: {bad}
       </p>
-      <Statistic good={good} mid={mid} bad={bad} /> 
+      <Statistic good={good} mid={mid} bad={bad} />
     </>
   )
 }
