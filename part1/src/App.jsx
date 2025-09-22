@@ -17,8 +17,8 @@ const App = () => {
   ]
 }
 
-  const Header = ({ course }) => <h1>{course}</h1>
-  const Part = ({ part, exercises }) => <p>{part} {exercises}</p>
+  const Header = ({ course }) => <h1>{course.name}</h1>
+  const Part = ({ part}) => <p>{part.name} {part.exercises}</p>
   const Content = ({ parts }) => (
     <div>
       <Part part={parts[0]} />
