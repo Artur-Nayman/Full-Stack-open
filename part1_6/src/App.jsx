@@ -36,7 +36,7 @@ function App() {
       <p className="read-the-docs">
         Bad: {bad}
       </p>
-      <Statistic good={good} mid={mid} bad={bad} />
+      <Statistic good={good} mid={mid} bad={bad} /> 
     </>
   )
 }
