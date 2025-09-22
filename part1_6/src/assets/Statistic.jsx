@@ -10,11 +10,16 @@ const Statistic = ({ good, mid, bad }) => {
   }
 
   return (
-    <>
-      <StatisticLine text="All" value={all}/>
-      <StatisticLine text="Average" value={average.toFixed(2)}/>
-      <StatisticLine text="Positive" value={positive.toFixed(1)}/>
-    </>
+    <table>
+        <tbody>
+            <StatisticLine text="Good" value={good}/>
+            <StatisticLine text="Mid" value={mid}/>
+            <StatisticLine text="Bad" value={bad}/>
+            <StatisticLine text="All" value={all}/>
+            <StatisticLine text="Average" value={average.toFixed(2)}/>
+            <StatisticLine text="Positive" value={positive.toFixed(1)}/>
+        </tbody>
+    </table>
   )
 }
 

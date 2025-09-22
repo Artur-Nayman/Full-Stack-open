@@ -21,17 +21,9 @@ function App() {
         <p>
           Statistic
         </p>
+        <Statistic good={good} mid={mid} bad={bad} />
       </div>
-      <p className="read-the-docs">
-        Good: {good}
-      </p>
-      <p className="read-the-docs">
-        Mid: {mid}
-      </p>
-      <p className="read-the-docs">
-        Bad: {bad}
-      </p>
-      <Statistic good={good} mid={mid} bad={bad} />
+
     </>
   )
 }
