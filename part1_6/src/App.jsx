@@ -32,6 +32,10 @@ function App() {
     copy[selected] += 1
     setVotes(copy)
   }
+
+  const maxVotes = Math.max(...votes)
+  const maxIndex = votes.indexOf(maxVotes)
+
   return (
     <>
       <h1>Give Feedback</h1>
@@ -44,12 +48,21 @@ function App() {
         </p>
         <Statistic good={good} mid={mid} bad={bad} />
       </div>
-       <div>
-           <p>{anecdotes[selected]}</p>
-           <p>has {votes[selected]} votes</p>
-           <button onClick={handleVote}>Vote</button>
-           <button onClick={getRandomAnecdote}>Next anecdote</button>
-       </div>
+    <div>
+      <h2>Anecdote of the day</h2>
+      <p>{anecdotes[selected]}</p>
+      <p>has {votes[selected]} votes</p>
+      <button onClick={handleVote}>vote</button>
+      <button onClick={getRandomAnecdote}>next anecdote</button>
+
+      <h2>Anecdote with most votes</h2>
+      {maxVotes > 0 && (
+        <>
+          <p>{anecdotes[maxIndex]}</p>
+          <p>has {votes[maxIndex]} votes</p>
+        </>
+      )}
+    </div>
     </>
   )
 }
